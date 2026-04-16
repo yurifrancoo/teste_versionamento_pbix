@@ -1,0 +1,9 @@
+{
+  "name": "Tabela",
+  "annotations": [
+    {
+      "name": "PBI_ResultType",
+      "value": "Table"
+    }
+  ]
+}

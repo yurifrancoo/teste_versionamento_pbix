@@ -1,0 +1,23 @@
+{
+  "name": "teste",
+  "compatibilityLevel": 1600,
+  "model": {
+    "culture": "pt-BR",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "pt-BR",
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Tabela\"]"
+      }
+    ]
+  }
+}
