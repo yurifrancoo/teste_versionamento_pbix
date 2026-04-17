@@ -1,0 +1,112 @@
+{
+  "projectionOrdering": {
+    "Values": [
+      0,
+      1
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "id",
+        "Name": "Sum(Tabela.id)",
+        "Type": 3,
+        "Format": "0"
+      },
+      {
+        "Restatement": "nome",
+        "Name": "Tabela.nome",
+        "Type": 2048
+      }
+    ],
+    "Filters": [
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tabela"
+              }
+            },
+            "Property": "nome"
+          }
+        }
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tabela"
+              }
+            },
+            "Property": "id"
+          }
+        }
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "id",
+      "format": "0",
+      "queryName": "Sum(Tabela.id)",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Tabela"
+            }
+          },
+          "Property": "id"
+        }
+      }
+    },
+    {
+      "displayName": "nome",
+      "queryName": "Tabela.nome",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Tabela"
+            }
+          },
+          "Property": "nome"
+        }
+      }
+    }
+  ]
+}

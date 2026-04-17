@@ -1,0 +1,67 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "Tabela",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "id"
+              },
+              "Name": "Sum(Tabela.id)",
+              "NativeReferenceName": "id"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "nome"
+              },
+              "Name": "Tabela.nome",
+              "NativeReferenceName": "nome"
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1
+                ],
+                "Subtotal": 1
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 3,
+            "Primary": {
+              "Window": {
+                "Count": 500
+              }
+            }
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}
