@@ -1,0 +1,95 @@
+{
+  "name": "9f60bc7434c6bc15e393",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 839.39209726443778,
+        "y": 342.370820668693,
+        "z": 1001,
+        "width": 279.14893617021278,
+        "height": 171.1854103343465,
+        "tabOrder": 1001
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "donutChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "Tabela.nome",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Sum(Tabela.id)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "t",
+          "Entity": "Tabela",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "t"
+              }
+            },
+            "Property": "nome"
+          },
+          "Name": "Tabela.nome",
+          "NativeReferenceName": "nome"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "id"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(Tabela.id)",
+          "NativeReferenceName": "Soma de id"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "t"
+                    }
+                  },
+                  "Property": "id"
+                }
+              },
+              "Function": 0
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true
+  }
+}
